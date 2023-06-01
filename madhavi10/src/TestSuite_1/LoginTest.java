@@ -18,22 +18,22 @@ public class LoginTest extends BaseTest {
     }
     @Test
     public void test1() {
-        //Classname
-        WebElement loginlink = driver.findElement(By.className("ico-login"));
-        loginlink.click();
 
+        //Classname
+        WebElement loginLink = driver.findElement(By.className("ico-login"));
+        loginLink.click();
 
         //Id
-        WebElement usernameField = driver.findElement(By.id("username"));
+        WebElement usernameField = driver.findElement(By.xpath("//input[@id='Username']"));
         usernameField.sendKeys("Admin");
 
         //Name
-        WebElement passwordField=driver.findElement(By.name("Password"));
+        WebElement passwordField=driver.findElement(By.xpath("//input[@id='Password']"));
         //driver.findElement(By.name("Password"));
         passwordField.sendKeys("admin123");
 
         //linkTest
-        WebElement loginButton=driver.findElement(By.linkText("log in"));
+        WebElement loginButton=driver.findElement(By.xpath("//a[text()='Log in']"));
         loginButton.click();
     }
     @After
